@@ -51,7 +51,7 @@ export function Hero() {
               <div className="absolute -inset-4 border-2 border-[#c49b63]/20 rounded-lg transform -rotate-3" />
               
               <Image
-                src="/images/Profissional-3.png"
+                src="/images/kellen-gagno.png"
                 alt="Kellen Gagno - Corretora de Imoveis"
                 width={450}
                 height={550}
