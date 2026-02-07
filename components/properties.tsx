@@ -49,6 +49,28 @@ const properties = [
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
     tag: "Lançamento"
   },
+  {
+    id: 5,
+    title: "Cidade Camburi",
+    location: "Jardim Camburi - Vitória-ES",
+    bedrooms: "1, 2 Quartos",
+    parking: 1,
+    area: "00 a 00m2",
+    price: "À partir de R$ x.000.000",
+    image: "/images/cidade-camburi.png",
+    tag: "Lançamento"
+  },
+  {
+    id: 6,
+    title: "Parque Flora",
+    location: "Jardim Camburi - Vitória-ES",
+    bedrooms: "1, 2, 3 Quartos",
+    parking: 1,
+    area: "00 a 00m2",
+    price: "À partir de R$ x.000.000",
+    image: "/images/parque-flora.png",
+    tag: "Lançamento"
+  },
 ]
 
 function getTagColor(tag: string) {
