@@ -8,46 +8,46 @@ const properties = [
   {
     id: 1,
     title: "Cyan Ocean Front",
-    location: "Enseada do Suá, Vitoria- ES",
-    bedrooms: "4 quartos c/ 4 Suítes",
+    location: "Enseada do Suá, Vitoria - ES",
+    bedrooms: "4 Quartos c/ 4 Suítes",
     parking: 4,
-    area: "249 a 536m2",
+    area: "249 à 536m2",
     price: "À partir de R$ x.000.000",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=600&fit=crop",
+    image: "/images/cyan-ocean-front.jpg",
     tag: "Lançamento"
   },
   {
     id: 2,
     title: "Reserva Vitória",
-    location: "Enseada do Suá, Vitoria- ES",
-    bedrooms: "4 quartos c/ 4 Suítes",
-    parking: 4,
-    area: "177 a 311m2",
+    location: "Enseada do Suá, Vitoria - ES",
+    bedrooms: "4 Quartos c/ 4 Suítes",
+    parking: 1,
+    area: "177 à 311m2",
     price: "À partir de R$ x.000.000",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-    tag: "Exclusivo"
+    tag: "Lançamento"
   },
   {
     id: 3,
     title: "Youniverse",
-    location: "Enseada do Suá, Vitoria- ES",
-    bedrooms: "Studio, 2 e 3 quartos",
-    parking: 4,
+    location: "Enseada do Suá, Vitoria - ES",
+    bedrooms: "Studio, 2 e 3 Quartos",
+    parking: 1,
     area: "38 a 94m2",
     price: "À partir de R$ x.000.000",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-    tag: "Lancamento"
+    tag: "Lançamento"
   },
   {
     id: 4,
     title: "Vive Le Vin",
     location: "Domingos Martins - ES",
-    bedrooms: "1, 2 ou 3 quartos",
-    parking: 3,
+    bedrooms: "1, 2 e 3 Quartos",
+    parking: 1,
     area: "56 a 86m2",
     price: "À partir de R$ x.000.000",
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
-    tag: "Novo"
+    tag: "Lançamento"
   },
 ]
 
@@ -57,7 +57,7 @@ function getTagColor(tag: string) {
       return "bg-[#c49b63] text-white"
     case "Exclusivo":
       return "bg-black text-white"
-    case "Lancamento":
+    case "Lançamento":
       return "bg-emerald-600 text-white"
     case "Novo":
       return "bg-sky-600 text-white"
@@ -68,7 +68,7 @@ function getTagColor(tag: string) {
 
 export function Properties() {
   const handleWhatsApp = (property: typeof properties[0]) => {
-    const message = `Ola! Tenho interesse no imóvel: ${property.title} - ${property.location} (${property.price}). Gostaria de mais informações.`
+    const message = `Ola! Tenho interesse no imovel: ${property.title} - ${property.location} (${property.price}). Gostaria de mais informacoes.`
     const whatsappUrl = `https://wa.me/5527992743485?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
@@ -83,12 +83,12 @@ export function Properties() {
           </h2>
           <div className="w-20 h-1 bg-[#c49b63] mx-auto mb-8" />
           <p className="font-[family-name:var(--font-body)] text-gray-600 text-lg">
-            Confira alguns imóveis exclusivos da minha carteira. Todos cuidadosamente selecionados para oferecer o melhor em qualidade e localização.
+            Confira alguns imoveis exclusivos da minha carteira. Todos cuidadosamente selecionados para oferecer o melhor em qualidade e localização.
           </p>
         </div>
 
         {/* Properties Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property) => (
             <div 
               key={property.id}

@@ -13,7 +13,7 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <Image
-              src="/images/Logo-escuro.png"
+              src="/images/logo-dark.png"
               alt="Kellen Gagno Corretora"
               width={150}
               height={75}
