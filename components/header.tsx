@@ -56,7 +56,7 @@ export function Header() {
 
         {/* CTA Button - Right aligned */}
         <Link
-          href="https://wa.me/5527992743485?text=Olá! Gostaria de saber mais sobre os imóveis disponíveis."
+          href="https://wa.me/5527992743485?text=Olá! Vi o seu site e gostaria de saber mais sobre os imóveis disponíveis."
           target="_blank"
           className="hidden md:block bg-[#c49b63] text-white px-6 py-2.5 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors"
         >
@@ -88,7 +88,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              href="https://wa.me/5527992743485?text=Olá! Gostaria de saber mais sobre os imóveis disponíveis."
+              href="https://wa.me/5527992743485?text=Olá! Vi o seu site e gostaria de saber mais sobre os imóveis disponíveis."
               target="_blank"
               className="bg-[#c49b63] text-white px-6 py-2.5 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors text-center mt-2"
             >

@@ -50,7 +50,7 @@ export default function RootLayout({
         {children}
         <Analytics />
                       {/* v0 – built-with badge */}
-  <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-74beddfb-9bf8-4ecb-b287-c629cf03934e" style="
+  {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-74beddfb-9bf8-4ecb-b287-c629cf03934e" style="
 border: 1px solid hsl(0deg 0% 100% / 12%);
 position: fixed;
 bottom: 24px;
@@ -131,9 +131,9 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 ">
   v0
 </span>
-</div>` }} />
+</div>` }} /> */}
 {/* v0 – built-with badge */}
-  <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-ded00bbe-a937-40c4-a0f1-ba5d5461326c" style="
+  {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-ded00bbe-a937-40c4-a0f1-ba5d5461326c" style="
 border: 1px solid hsl(0deg 0% 100% / 12%);
 position: fixed;
 bottom: 24px;
@@ -214,7 +214,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 ">
   v0
 </span>
-</div>` }} />
+</div>` }} /> */}
       </body>
     </html>
   )

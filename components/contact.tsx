@@ -14,8 +14,8 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
-    const message = `Ola! Meu nome e ${formData.name}.
-${formData.type ? `Interesse: ${formData.type}` : ""}
+    const message = `Olá! Meu nome é ${formData.name}.
+${formData.type ? `Tem interesse em: ${formData.type}` : ""}
 
 ${formData.message}`
 
@@ -40,7 +40,7 @@ ${formData.message}`
           </h2>
           <div className="w-20 h-1 bg-[#c49b63] mx-auto mb-8" />
           <p className="font-[family-name:var(--font-body)] text-gray-600 text-lg">
-            Preencha o formulário abaixo e vamos encontrar o imível ideal para você.     
+            Preencha o formulário abaixo e vamos encontrar o imóvel ideal para você.     
           </p>
         </div>
 
@@ -48,7 +48,7 @@ ${formData.message}`
           {/* Contact Form */}
           <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 text-left">
             <h3 className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-black mb-6">
-              Preencha o Formulario
+              Preencha o Formulário
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -79,12 +79,12 @@ ${formData.message}`
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white font-[family-name:var(--font-body)] text-black focus:outline-none focus:ring-2 focus:ring-[#c49b63] focus:border-transparent transition-all"
                 >
-                  <option value="">Selecione uma opcao</option>
+                  <option value="">Selecione uma opção</option>
                   <option value="Apartamento">Apartamento</option>
                   <option value="Casa">Casa</option>
                   <option value="Terreno">Terreno</option>
                   <option value="Cobertura">Cobertura</option>
-                  <option value="Imovel Comercial">Imovel Comercial</option>
+                  <option value="Imóvel Comercial">Imóvel Comercial</option>
                   <option value="Outro">Outro</option>
                 </select>
               </div>

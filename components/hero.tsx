@@ -38,7 +38,7 @@ export function Hero() {
                 href="#imoveis"
                 className="border-2 border-[#c49b63] text-[#c49b63] px-8 py-3.5 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#c49b63] hover:text-white transition-colors text-center"
               >
-                Ver Imoveis
+                Ver Imóveis
               </Link>
             </div>
           </div>
@@ -52,7 +52,7 @@ export function Hero() {
               
               <Image
                 src="/images/kellen-gagno.png"
-                alt="Kellen Gagno - Corretora de Imoveis"
+                alt="Kellen Gagno - Corretora de Imóveis"
                 width={450}
                 height={550}
                 className="rounded-lg shadow-2xl relative z-10 object-cover"

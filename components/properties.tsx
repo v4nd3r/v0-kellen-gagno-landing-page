@@ -10,9 +10,7 @@ const properties = [
     title: "Cyan Ocean Front",
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "4 Quartos c/ 4 Suítes",
-    parking: 4,
     area: "249 à 536m2",
-    price: "À partir de R$ x.000.000",
     image: "/images/cyan-ocean-front.jpg",
     tag: "Lançamento"
   },
@@ -21,10 +19,8 @@ const properties = [
     title: "Reserva Vitória",
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "4 Quartos c/ 4 Suítes",
-    parking: 1,
     area: "177 à 311m2",
-    price: "À partir de R$ x.000.000",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
+    image: "/images/reserva-vitoria.jpg",
     tag: "Lançamento"
   },
   {
@@ -32,10 +28,8 @@ const properties = [
     title: "Youniverse",
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "Studio, 2 e 3 Quartos",
-    parking: 1,
     area: "38 a 94m2",
-    price: "À partir de R$ x.000.000",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
+    image: "/images/youniverse.jpg",
     tag: "Lançamento"
   },
   {
@@ -43,9 +37,7 @@ const properties = [
     title: "Vive Le Vin",
     location: "Domingos Martins - ES",
     bedrooms: "1, 2 e 3 Quartos",
-    parking: 1,
     area: "56 a 86m2",
-    price: "À partir de R$ x.000.000",
     image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
     tag: "Lançamento"
   },
@@ -54,9 +46,7 @@ const properties = [
     title: "Cidade Camburi",
     location: "Jardim Camburi - Vitória-ES",
     bedrooms: "1, 2 Quartos",
-    parking: 1,
-    area: "00 a 00m2",
-    price: "À partir de R$ x.000.000",
+    area: "30 a 67m2",
     image: "/images/cidade-camburi.png",
     tag: "Lançamento"
   },
@@ -64,10 +54,8 @@ const properties = [
     id: 6,
     title: "Parque Flora",
     location: "Jardim Camburi - Vitória-ES",
-    bedrooms: "1, 2, 3 Quartos",
-    parking: 1,
-    area: "00 a 00m2",
-    price: "À partir de R$ x.000.000",
+    bedrooms: "2, 3 Quartos e 3 Suites",
+    area: "64 a 227m2",
     image: "/images/parque-flora.png",
     tag: "Lançamento"
   },
@@ -90,7 +78,7 @@ function getTagColor(tag: string) {
 
 export function Properties() {
   const handleWhatsApp = (property: typeof properties[0]) => {
-    const message = `Ola! Tenho interesse no imovel: ${property.title} - ${property.location} (${property.price}). Gostaria de mais informacoes.`
+    const message = `Olá! Tenho interesse no imóvel: ${property.title} - ${property.location} (${property.price}). Gostaria de mais informações.`
     const whatsappUrl = `https://wa.me/5527992743485?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }
@@ -101,11 +89,11 @@ export function Properties() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4">
-            Imoveis Selecionados
+            Imóveis Selecionados
           </h2>
           <div className="w-20 h-1 bg-[#c49b63] mx-auto mb-8" />
           <p className="font-[family-name:var(--font-body)] text-gray-600 text-lg">
-            Confira alguns imoveis exclusivos da minha carteira. Todos cuidadosamente selecionados para oferecer o melhor em qualidade e localização.
+            Confira alguns imóveis exclusivos da minha carteira. Todos cuidadosamente selecionados para oferecer o melhor em qualidade e localização.
           </p>
         </div>
 
@@ -147,10 +135,6 @@ export function Properties() {
                     <span className="font-[family-name:var(--font-body)] text-sm">{property.bedrooms}</span>
                   </div>
                   <div className="flex items-center gap-1 text-gray-500">
-                    <Car className="w-4 h-4" />
-                    <span className="font-[family-name:var(--font-body)] text-sm">{property.parking}</span>
-                  </div>
-                  <div className="flex items-center gap-1 text-gray-500">
                     <Maximize className="w-4 h-4" />
                     <span className="font-[family-name:var(--font-body)] text-sm">{property.area}</span>
                   </div>
@@ -158,9 +142,6 @@ export function Properties() {
 
                 {/* Price and CTA */}
                 <div className="flex items-center justify-between">
-                  <span className="font-[family-name:var(--font-heading)] text-xl font-bold text-black">
-                    {property.price}
-                  </span>
                   <button
                     onClick={() => handleWhatsApp(property)}
                     className="bg-[#c49b63] text-white px-4 py-2 rounded font-[family-name:var(--font-body)] text-sm font-medium hover:bg-[#b38a52] transition-colors"
@@ -176,11 +157,11 @@ export function Properties() {
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
-            href="https://wa.me/5527992743485?text=Ola! Gostaria de conhecer mais imoveis disponiveis."
+            href="https://wa.me/5527992743485?text=Olá! Vi o seu site e gostaria de conhecer mais imóveis disponíveis."
             target="_blank"
             className="inline-block bg-[#c49b63] text-white px-8 py-3.5 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#b38a52] transition-colors"
           >
-            Ver Mais Imoveis
+            Ver Mais Imóveis
           </Link>
         </div>
       </div>
