@@ -34,17 +34,17 @@ const properties = [
   },
   {
     id: 4,
-    title: "Vive Le Vin",
-    location: "Domingos Martins - ES",
-    bedrooms: "1, 2 e 3 Quartos",
-    area: "56 a 86m2",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
+    title: "Hillside",
+    location: "Santa Lúcia, Vitória-ES",
+    bedrooms: "2 à 4 Quartos",
+    area: "65 a 170m2",
+    image: "/images/hillside.jpg",
     tag: "Lançamento"
   },
   {
     id: 5,
     title: "Cidade Camburi",
-    location: "Jardim Camburi - Vitória-ES",
+    location: "Jardim Camburi, Vitória-ES",
     bedrooms: "1, 2 Quartos",
     area: "30 a 67m2",
     image: "/images/cidade-camburi.png",
@@ -53,7 +53,7 @@ const properties = [
   {
     id: 6,
     title: "Parque Flora",
-    location: "Jardim Camburi - Vitória-ES",
+    location: "Jardim Camburi, Vitória-ES",
     bedrooms: "2, 3 Quartos e 3 Suites",
     area: "64 a 227m2",
     image: "/images/parque-flora.png",
@@ -141,7 +141,7 @@ export function Properties() {
                 </div>
 
                 {/* Price and CTA */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-end">
                   <button
                     onClick={() => handleWhatsApp(property)}
                     className="bg-[#c49b63] text-white px-4 py-2 rounded font-[family-name:var(--font-body)] text-sm font-medium hover:bg-[#b38a52] transition-colors"

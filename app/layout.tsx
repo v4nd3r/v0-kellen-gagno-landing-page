@@ -4,13 +4,13 @@ import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-heading'
 });
 
-const montserrat = Montserrat({ 
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-body'
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon.png',
+        // type: 'image/svg+xml',
       },
     ],
     apple: '/apple-icon.png',
@@ -49,8 +49,8 @@ export default function RootLayout({
       <body className={`${cormorant.variable} ${montserrat.variable} antialiased`}>
         {children}
         <Analytics />
-                      {/* v0 – built-with badge */}
-  {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-74beddfb-9bf8-4ecb-b287-c629cf03934e" style="
+        {/* v0 – built-with badge */}
+        {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-74beddfb-9bf8-4ecb-b287-c629cf03934e" style="
 border: 1px solid hsl(0deg 0% 100% / 12%);
 position: fixed;
 bottom: 24px;
@@ -132,8 +132,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   v0
 </span>
 </div>` }} /> */}
-{/* v0 – built-with badge */}
-  {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-ded00bbe-a937-40c4-a0f1-ba5d5461326c" style="
+        {/* v0 – built-with badge */}
+        {/* <div dangerouslySetInnerHTML={{ __html: `<div id="v0-built-with-button-ded00bbe-a937-40c4-a0f1-ba5d5461326c" style="
 border: 1px solid hsl(0deg 0% 100% / 12%);
 position: fixed;
 bottom: 24px;
