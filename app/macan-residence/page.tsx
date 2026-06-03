@@ -109,7 +109,7 @@ export default function MacanResidencePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 lg:pt-28">
+      <section className="pt-18">
         <div className="relative h-[60vh] lg:h-[70vh]">
           <Image
             src="/images/macan/fachada.jpg"
@@ -135,7 +135,7 @@ export default function MacanResidencePage() {
                   <span className="text-white font-[family-name:var(--font-body)] text-sm">2 Quartos c/ Suíte</span>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
-                  <span className="text-white font-[family-name:var(--font-body)] text-sm">59,83 m²</span>
+                  <span className="text-white font-[family-name:var(--font-body)] text-sm">À partir de 59,83 m²</span>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
                   <span className="text-white font-[family-name:var(--font-body)] text-sm">Jardim Camburi</span>
@@ -282,9 +282,16 @@ export default function MacanResidencePage() {
                 </p>
               </div>
             </div>
+              
+            <div className="rounded-lg mb-6 overflow-hidden">
+              <img
+                src="/images/macan/mapa Macan.png"
+                alt="Localização do Macan Residence" />
+            </div>
+
             <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.8844832774854!2d-40.28!3d-20.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDE2JzEyLjAiUyA0MMKwMTYnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d233.95091302349937!2d-40.26676975298546!3d-20.249932440199082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1780452235970!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
