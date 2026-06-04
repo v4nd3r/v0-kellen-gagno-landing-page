@@ -91,6 +91,12 @@ export default function MacanResidencePage() {
     window.open(whatsappUrl, "_blank")
   }
 
+  const itemsPerPage = 3
+  const totalGallerySlides = Math.ceil(galeria.length / itemsPerPage)
+  const gallerySlides = Array.from({ length: totalGallerySlides }, (_, index) =>
+    galeria.slice(index * itemsPerPage, index * itemsPerPage + itemsPerPage)
+  )
+
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
@@ -419,18 +425,26 @@ export default function MacanResidencePage() {
             </h2>
             <div className="w-20 h-1 bg-[#c49b63] mx-auto" />
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {galeria.map((image, index) => (
-              <div key={index} className="relative aspect-square rounded-lg overflow-hidden group">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-              </div>
-            ))}
+          <div className="overflow-auto">
+            <div
+              className="flex gap-4 transition-transform duration-500"
+            >
+              {gallerySlides.map((slide, slideIndex) => (
+                <div key={slideIndex} className="flex-shrink-0 w-full grid gap-4 grid-cols-1 md:grid-cols-3">
+                  {slide.map((image) => (
+                    <div key={image.src} className="relative aspect-square rounded-lg overflow-hidden group">
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
