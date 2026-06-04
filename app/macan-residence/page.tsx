@@ -63,9 +63,18 @@ const lazer = [
 
 const galeria = [
   { src: "/images/macan/fachada.jpg", alt: "Fachada do Macan Residence" },
-  { src: "/images/macan/living.jpg", alt: "Living integrado" },
-  { src: "/images/macan/pool.jpg", alt: "Área de lazer com piscina" },
-  { src: "/images/macan/bedroom.jpg", alt: "Suíte master" },
+  { src: "/images/macan/Argo_Macan_Academia.jpg", alt: "Academia" },
+  { src: "/images/macan/Argo_Macan_Bicicletario.jpg", alt: "Bicicletário" },
+  { src: "/images/macan/Argo_Macan_Brinquedoteca.jpg", alt: "Brinquedoteca" },
+  { src: "/images/macan/Argo_Macan_Confraria.jpg", alt: "Confraria" },
+  { src: "/images/macan/Argo_Macan_Coworking.jpg", alt: "Coworking" },
+  { src: "/images/macan/Argo_Macan_Mini_Mercado.jpg", alt: "Mini Mercado" },
+  { src: "/images/macan/imagens-macan.png", alt: "Banheiro social" },
+  { src: "/images/macan/imagens-macan3.png", alt: "Suíte" },
+  { src: "/images/macan/imagens-macan4.png", alt: "Sala de jantar" },
+  { src: "/images/macan/imagens-macan5.png", alt: "Garden" },
+  { src: "/images/macan/imagens-macan6.png", alt: "Cozinha" },
+  { src: "/images/macan/imagens-macan7.png", alt: "varanda" },
 ]
 
 export default function MacanResidencePage() {
@@ -87,7 +96,7 @@ export default function MacanResidencePage() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-black hover:text-[#c49b63] transition-colors">
+          <Link href="/" className="flex items-center gap-2 text-black hover:text-[#c49b63] transition-colors hidden md:block">
             <ArrowLeft className="w-5 h-5" />
             <span className="font-[family-name:var(--font-body)] text-sm font-medium">Voltar</span>
           </Link>
@@ -101,7 +110,7 @@ export default function MacanResidencePage() {
           <Link
             href="https://wa.me/5527992743485?text=Olá! Tenho interesse no Macan Residence."
             target="_blank"
-            className="bg-[#c49b63] text-white px-4 py-2 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors"
+            className="bg-[#c49b63] text-white px-4 py-2 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors hidden md:block"
           >
             Fale Comigo
           </Link>
@@ -127,7 +136,7 @@ export default function MacanResidencePage() {
               <h1 className="font-[family-name:var(--font-heading)] text-4xl lg:text-6xl text-white font-semibold mb-4">
                 Macan Residence
               </h1>
-              <p className="font-[family-name:var(--font-body)] text-lg lg:text-xl text-white/90 max-w-2xl">
+              <p className="font-[family-name:var(--font-body)] text-lg lg:text-xl text-white/90 max-w-2xl drop-shadow-lg">
                 Seu refúgio de conforto e tranquilidade em Jardim Camburi. Apartamentos de 2 quartos com suíte e opções Garden.
               </p>
               <div className="flex flex-wrap gap-4 mt-6">
@@ -178,7 +187,7 @@ export default function MacanResidencePage() {
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/images/macan/living.jpg"
+                src="/images/macan/imagens-macan4.png"
                 alt="Interior do Macan Residence"
                 fill
                 className="object-cover"
@@ -221,7 +230,7 @@ export default function MacanResidencePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/images/macan/pool.jpg"
+                src="/images/macan/argo-macan-bg-scaled.jpg"
                 alt="Área de lazer do Macan Residence"
                 fill
                 className="object-cover"
@@ -283,7 +292,7 @@ export default function MacanResidencePage() {
               </div>
             </div>
               
-            <div className="rounded-lg mb-6 overflow-hidden">
+            <div className="rounded-lg mb-6 overflow-hidden flex justify-center">
               <img
                 src="/images/macan/mapa Macan.png"
                 alt="Localização do Macan Residence" />
