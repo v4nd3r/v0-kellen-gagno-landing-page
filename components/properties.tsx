@@ -7,12 +7,13 @@ import { MapPin, Bed, Car, Maximize } from "lucide-react"
 const properties = [
   {
     id: 1,
-    title: "Cyan Ocean Front",
-    location: "Enseada do Suá, Vitoria - ES",
-    bedrooms: "4 Quartos c/ 4 Suítes",
-    area: "249 à 536m2",
-    image: "/images/cyan-ocean-front.jpg",
-    tag: "Lançamento"
+    title: "Macan Residence",
+    location: "Jardim Camburi, Vitoria - ES",
+    bedrooms: "2 Quartos c/ Suíte",
+    area: "À partir de 59,83m2",
+    image: "/images/macan/fachada.jpg",
+    tag: "Lançamento",
+    link: "/macan-residence"
   },
   {
     id: 2,
@@ -39,7 +40,7 @@ const properties = [
     bedrooms: "2 à 4 Quartos",
     area: "65 a 170m2",
     image: "/images/hillside.jpg",
-    tag: "Lançamento"
+    tag: "Destaque"
   },
   {
     id: 5,
@@ -47,7 +48,7 @@ const properties = [
     location: "Jardim Camburi, Vitória-ES",
     bedrooms: "1, 2 Quartos",
     area: "30 a 67m2",
-    image: "/images/cidade-camburi.png",
+    image: "/images/cidade-camburi.jpeg",
     tag: "Lançamento"
   },
   {
@@ -143,7 +144,7 @@ export function Properties() {
                 {/* Price and CTA */}
                 <div className="flex items-center justify-end">
                   <button
-                    onClick={() => handleWhatsApp(property)}
+                    onClick={() => property.link ? location.href = property.link : handleWhatsApp(property)}
                     className="bg-[#c49b63] text-white px-4 py-2 rounded font-[family-name:var(--font-body)] text-sm font-medium hover:bg-[#b38a52] transition-colors"
                   >
                     Saiba Mais
