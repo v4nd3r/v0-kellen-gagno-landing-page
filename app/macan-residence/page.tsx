@@ -92,11 +92,11 @@ export default function MacanResidencePage() {
             <span className="font-[family-name:var(--font-body)] text-sm font-medium">Voltar</span>
           </Link>
           <Image
-            src="/images/logo.png"
+            src="/images/logo-horizontal.png"
             alt="Kellen Gagno Corretora"
             width={100}
             height={50}
-            className="h-10 w-auto"
+            className="h-15 w-auto"
           />
           <Link
             href="https://wa.me/5527992743485?text=Olá! Tenho interesse no Macan Residence."
@@ -502,7 +502,7 @@ export default function MacanResidencePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Image
-              src="/images/logo-dark.png"
+              src="/images/logo-dark-sem-fundo-horizontal.png"
               alt="Kellen Gagno Corretora"
               width={120}
               height={60}

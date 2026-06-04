@@ -78,7 +78,7 @@ function getTagColor(tag: string) {
 
 export function Properties() {
   const handleWhatsApp = (property: typeof properties[0]) => {
-    const message = `Olá! Tenho interesse no imóvel: ${property.title} - ${property.location} (${property.price}). Gostaria de mais informações.`
+    const message = `Olá! Tenho interesse no imóvel: ${property.title} - ${property.location}. Gostaria de mais informações.`
     const whatsappUrl = `https://wa.me/5527992743485?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, "_blank")
   }

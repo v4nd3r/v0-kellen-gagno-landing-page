@@ -1,8 +1,11 @@
 import React from "react"
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Cormorant_Garamond, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+const GA_ID = 'AW-18213345912' //Id do Tagueamento do Google Ads
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,6 +49,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body className={`${cormorant.variable} ${montserrat.variable} antialiased`}>
         {children}
         <Analytics />
