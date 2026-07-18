@@ -58,7 +58,8 @@ const properties = [
     bedrooms: "2, 3 Quartos e 3 Suites",
     area: "64 a 227m2",
     image: "/images/parque-flora.png",
-    tag: "Lançamento"
+    tag: "Lançamento",
+    link: "/parque-flora"
   },
 ]
 
