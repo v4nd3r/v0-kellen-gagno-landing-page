@@ -3,7 +3,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight, Dumbbell, Leaf, MapPin, PawPrint, Trees, Utensils, Waves, Wifi, Building2, Flower2, Baby, Flame, Check } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, Dumbbell, Leaf, MapPin, PawPrint, Trees, Utensils, Waves, Wifi, Building2, Flower2, Baby, Flame, Check } from "lucide-react"
+import { PropertyFooter } from "@/components/Empreendimentos/property-footer"
+import { PropertyHeader } from "@/components/Empreendimentos/property-header"
 
 const whatsapp = "5527992743485"
 const gallery = [
@@ -55,15 +57,10 @@ export function ParqueFloraPage() {
 
   return (
     <main className="min-h-screen bg-white text-[#14231c]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#14231c]/10 bg-white/95 backdrop-blur-sm">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4">
-          <Link href="/" className="flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#b18a57]" aria-label="Voltar para a página inicial">
-            <ArrowLeft className="h-5 w-5" /><span className="hidden sm:inline">Voltar</span>
-          </Link>
-          <Image src="/images/logo-horizontal.png" alt="Kellen Gagno Corretora" width={120} height={60} className="h-14 w-auto" priority />
-          <WhatsAppLink message="Olá! Tenho interesse no Parque Flora." className="rounded bg-[#b18a57] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#14231c]">Fale comigo</WhatsAppLink>
-        </div>
-      </header>
+      <PropertyHeader
+        propertyName="Parque Flora"
+        whatsappMessage="Olá! Tenho interesse no Parque Flora."
+      />
 
       <section className="relative flex min-h-[760px] items-end pt-20 lg:min-h-[820px]">
         <Image src="/images/parque-flora/hero.jpg" alt="Vista da área de lazer do Parque Flora" fill priority sizes="100vw" className="object-cover" />
@@ -172,7 +169,10 @@ export function ParqueFloraPage() {
         </div>
       </section>
 
-      <footer className="bg-[#0d1712] py-8 text-white/60"><div className="container mx-auto flex flex-col gap-4 px-4 text-center font-[family-name:var(--font-body)] text-xs sm:flex-row sm:items-center sm:justify-between sm:text-left"><Image src="/images/logo-dark-sem-fundo-horizontal.png" alt="Kellen Gagno" width={110} height={55} className="mx-auto h-12 w-auto sm:mx-0" /><p>Atendimento personalizado para encontrar o imóvel ideal.</p></div></footer>
+      <PropertyFooter
+        legalNotice="Atendimento personalizado para encontrar o imóvel ideal."
+        whatsappMessage="Olá! Tenho interesse no Parque Flora."
+      />
     </main>
   )
 }
