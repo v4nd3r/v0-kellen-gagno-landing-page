@@ -6,7 +6,7 @@ import { useState } from "react"
 import { ArrowRight, ChevronLeft, ChevronRight, Dumbbell, Leaf, MapPin, PawPrint, Trees, Utensils, Waves, Wifi, Building2, Flower2, Baby, Flame, Check } from "lucide-react"
 import { PropertyFooter } from "@/components/Imoveis/property-footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
-import { HeroHeader } from "./Imoveis/hero"
+import { PropertyHero } from "./Imoveis/property-hero"
 
 const whatsapp = "5527992743485"
 const gallery = [
@@ -64,7 +64,7 @@ export function ParqueFloraPage() {
       />
 
       {/* Hero Section */}
-      <HeroHeader
+      <PropertyHero
         urlImage="/images/parque-flora/hero.jpg"
         altUrlImage="Parque Flora"
         tipoEmpreendimento="Lançamento"

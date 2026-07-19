@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { PropertyFooter } from "@/components/Imoveis/property-footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
-import { HeroHeader } from "@/components/Imoveis/hero"
+import { PropertyHero } from "@/components/Imoveis/property-hero"
 import { 
   Wifi, 
   Wind, 
@@ -108,7 +108,7 @@ export default function MacanResidencePage() {
       />
 
       {/* Hero Section */}
-      <HeroHeader
+      <PropertyHero
         urlImage="/images/macan/fachada.jpg"
         altUrlImage="Macan Residence"
         tipoEmpreendimento="Lançamento"

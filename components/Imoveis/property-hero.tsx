@@ -11,7 +11,7 @@ type HeroHeaderProps = {
   detalhesEmpreendimento?: string[]
 }
 
-export function HeroHeader({ urlImage, altUrlImage, tipoEmpreendimento, nomeEmpreendimento, descricaoEmpreendimento, detalhesEmpreendimento }: HeroHeaderProps) {
+export function PropertyHero({ urlImage, altUrlImage, tipoEmpreendimento, nomeEmpreendimento, descricaoEmpreendimento, detalhesEmpreendimento }: HeroHeaderProps) {
 
   return (
     <section className="pt-18">
