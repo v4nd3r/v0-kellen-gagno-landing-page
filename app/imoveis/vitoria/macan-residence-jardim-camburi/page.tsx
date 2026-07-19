@@ -3,8 +3,9 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { PropertyFooter } from "@/components/Empreendimentos/property-footer"
-import { PropertyHeader } from "@/components/Empreendimentos/property-header"
+import { PropertyFooter } from "@/components/Imoveis/property-footer"
+import { PropertyHeader } from "@/components/Imoveis/property-header"
+import { HeroHeader } from "@/components/Imoveis/hero"
 import { 
   Wifi, 
   Wind, 
@@ -33,6 +34,7 @@ import {
   Bike,
   Flame
 } from "lucide-react"
+
 
 const diferenciais = [
   { icon: Wifi, text: "Infraestrutura para automação residencial com quadro de conectividade exclusivo" },
@@ -106,42 +108,14 @@ export default function MacanResidencePage() {
       />
 
       {/* Hero Section */}
-      <section className="pt-18">
-        <div className="relative h-[60vh] lg:h-[70vh]">
-          <Image
-            src="/images/macan/fachada.jpg"
-            alt="Macan Residence"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
-            <div className="container mx-auto">
-              <span className="inline-block bg-[#c49b63] text-white px-4 py-1 rounded text-sm font-[family-name:var(--font-body)] font-medium mb-4">
-                Lançamento
-              </span>
-              <h1 className="font-[family-name:var(--font-heading)] text-4xl lg:text-6xl text-white font-semibold mb-4">
-                Macan Residence
-              </h1>
-              <p className="font-[family-name:var(--font-body)] text-lg lg:text-xl text-white/90 max-w-2xl drop-shadow-lg">
-                Seu refúgio de conforto e tranquilidade em Jardim Camburi. Apartamentos de 2 quartos com suíte e opções Garden.
-              </p>
-              <div className="flex flex-wrap gap-4 mt-6">
-                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
-                  <span className="text-white font-[family-name:var(--font-body)] text-sm">2 Quartos c/ Suíte</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
-                  <span className="text-white font-[family-name:var(--font-body)] text-sm">À partir de 59,83 m²</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
-                  <span className="text-white font-[family-name:var(--font-body)] text-sm">Jardim Camburi</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroHeader
+        urlImage="/images/macan/fachada.jpg"
+        altUrlImage="Macan Residence"
+        tipoEmpreendimento="Lançamento"
+        nomeEmpreendimento="Macan Residence"
+        descricaoEmpreendimento="Seu refúgio de conforto e tranquilidade em Jardim Camburi. Apartamentos de 2 quartos com suíte e opções Garden."
+        detalhesEmpreendimento={["2 Quartos c/ Suíte", "À partir de 59,83 m²", "Jardim Camburi"]}
+      />
 
       {/* About Section */}
       <section className="py-16 lg:py-24 bg-white">

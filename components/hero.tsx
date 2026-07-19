@@ -20,11 +20,11 @@ export function Hero() {
             <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight mb-4">
               Kellen Gagno
             </h1>
-            <p className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-[#c49b63] mb-6">
-              Consultora Imobiliária
-            </p>
+            <h2 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-[#c49b63] mb-6">
+              Corretora de Imóveis de médio e alto Padrão na Grande Vitória
+            </h2>
             <p className="font-[family-name:var(--font-body)] text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-              Especialista em imóveis de médio e alto padrão. Experiência e dedicação para encontrar o imóvel ideal para você e sua família.
+              Experiência e dedicação para encontrar o imóvel ideal para você e sua família.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

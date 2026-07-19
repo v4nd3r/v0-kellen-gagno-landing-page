@@ -13,16 +13,17 @@ const properties = [
     area: "À partir de 59,83m2",
     image: "/images/macan/fachada.jpg",
     tag: "Lançamento",
-    link: "/macan-residence"
+    link: "/imoveis/vitoria/macan-residence-jardim-camburi"
   },
   {
     id: 2,
-    title: "Reserva Vitória",
-    location: "Enseada do Suá, Vitoria - ES",
-    bedrooms: "4 Quartos c/ 4 Suítes",
-    area: "177 à 311m2",
-    image: "/images/reserva-vitoria.jpg",
-    tag: "Lançamento"
+    title: "Parque Flora",
+    location: "Jardim Camburi, Vitória-ES",
+    bedrooms: "2, 3 Quartos e 3 Suites",
+    area: "64 a 227m2",
+    image: "/images/parque-flora.png",
+    tag: "Lançamento",
+    link: "/imoveis/vitoria/parque-flora-jardim-camburi"
   },
   {
     id: 3,
@@ -53,13 +54,12 @@ const properties = [
   },
   {
     id: 6,
-    title: "Parque Flora",
-    location: "Jardim Camburi, Vitória-ES",
-    bedrooms: "2, 3 Quartos e 3 Suites",
-    area: "64 a 227m2",
-    image: "/images/parque-flora.png",
-    tag: "Lançamento",
-    link: "/parque-flora"
+    title: "Reserva Vitória",
+    location: "Enseada do Suá, Vitoria - ES",
+    bedrooms: "4 Quartos c/ 4 Suítes",
+    area: "177 à 311m2",
+    image: "/images/reserva-vitoria.jpg",
+    tag: "Lançamento"
   },
 ]
 

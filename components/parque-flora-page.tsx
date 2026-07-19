@@ -4,12 +4,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { ArrowRight, ChevronLeft, ChevronRight, Dumbbell, Leaf, MapPin, PawPrint, Trees, Utensils, Waves, Wifi, Building2, Flower2, Baby, Flame, Check } from "lucide-react"
-import { PropertyFooter } from "@/components/Empreendimentos/property-footer"
-import { PropertyHeader } from "@/components/Empreendimentos/property-header"
+import { PropertyFooter } from "@/components/Imoveis/property-footer"
+import { PropertyHeader } from "@/components/Imoveis/property-header"
+import { HeroHeader } from "./Imoveis/hero"
 
 const whatsapp = "5527992743485"
 const gallery = [
-  { src: "/images/parque-flora/hero.jpg", alt: "Piscina e área de lazer do Parque Flora", label: "Piscina e lazer" },
+  { src: "/images/parque-flora/hero.jpg", alt: "fachada do Parque Flora", label: "Fachada" },
   { src: "/images/parque-flora/deck.jpg", alt: "Deck molhado do Parque Flora", label: "Deck molhado" },
   { src: "/images/parque-flora/pool-bar.jpg", alt: "Bar da piscina do Parque Flora", label: "Bar da piscina" },
   { src: "/images/parque-flora/grill.jpg", alt: "Espaço grill do Parque Flora", label: "Espaço grill" },
@@ -62,21 +63,15 @@ export function ParqueFloraPage() {
         whatsappMessage="Olá! Tenho interesse no Parque Flora."
       />
 
-      <section className="relative flex min-h-[760px] items-end pt-20 lg:min-h-[820px]">
-        <Image src="/images/parque-flora/hero.jpg" alt="Vista da área de lazer do Parque Flora" fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#14231c]/60" />
-        <div className="container relative z-10 mx-auto px-4 pb-16 pt-32 lg:pb-24">
-          <div className="max-w-4xl">
-            <p className="mb-5 font-[family-name:var(--font-body)] text-sm font-semibold uppercase tracking-[0.22em] text-[#e7d5b9]">Lançamento em Jardim Camburi</p>
-            <h1 className="text-balance font-[family-name:var(--font-heading)] text-6xl font-semibold leading-none text-white md:text-7xl lg:text-8xl">Parque Flora</h1>
-            <p className="mt-6 max-w-2xl text-pretty font-[family-name:var(--font-body)] text-lg leading-relaxed text-white/90 md:text-xl">Um novo jeito de viver, onde natureza, arquitetura e conveniência florescem juntas.</p>
-            <div className="mt-8 flex flex-wrap gap-3 font-[family-name:var(--font-body)] text-sm text-white">
-              {["2 e 3 quartos", "3 suítes", "64,78 a 227,01 m²"].map((item) => <span key={item} className="border border-white/40 bg-[#14231c]/45 px-4 py-2">{item}</span>)}
-            </div>
-            <WhatsAppLink message="Olá! Quero conhecer o Parque Flora." className="mt-10 inline-flex items-center gap-3 rounded bg-[#b18a57] px-7 py-4 font-[family-name:var(--font-body)] text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#14231c]">Quero conhecer <ArrowRight className="h-4 w-4" /></WhatsAppLink>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroHeader
+        urlImage="/images/parque-flora/hero.jpg"
+        altUrlImage="Parque Flora"
+        tipoEmpreendimento="Lançamento"
+        nomeEmpreendimento="Parque Flora"
+        descricaoEmpreendimento="Um novo jeito de viver, onde natureza, arquitetura e conveniência florescem juntas."
+        detalhesEmpreendimento={["2 e 3 quartos", "3 suítes", "64,78 a 227,01 m²"]}
+      />
 
       <section className="bg-[#f4f1eb] py-20 lg:py-28">
         <div className="container mx-auto grid gap-12 px-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
@@ -121,7 +116,11 @@ export function ParqueFloraPage() {
             <div className="absolute bottom-0 left-0 bg-[#14231c] px-5 py-3 font-[family-name:var(--font-body)] text-sm text-white">{gallery[activeImage].label} · {String(activeImage + 1).padStart(2, "0")}/{String(gallery.length).padStart(2, "0")}</div>
           </div>
           <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-            {gallery.map((image, index) => <button key={image.src} onClick={() => setActiveImage(index)} className={`relative h-20 min-w-28 overflow-hidden rounded border-2 ${activeImage === index ? "border-[#b18a57]" : "border-transparent"}`} aria-label={`Ver ${image.label}`} aria-current={activeImage === index}><Image src={image.src} alt="" fill sizes="112px" className="object-cover" /></button>)}
+            {gallery.map((image, index) =>
+              <button key={image.src} onClick={() => setActiveImage(index)} className={`relative h-20 min-w-28 overflow-hidden rounded border-2 ${activeImage === index ? "border-[#b18a57]" : "border-transparent"}`} aria-label={`Ver ${image.label}`} aria-current={activeImage === index}>
+                <Image src={image.src} alt="" fill sizes="112px" className="object-cover" />
+              </button>
+            )}
           </div>
         </div>
       </section>

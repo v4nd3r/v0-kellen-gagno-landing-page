@@ -20,8 +20,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Kellen Gagno | Corretora de Imóveis de Alto Padrão',
-  description: 'Especialista em imóveis de médio e alto padrão. Encontre o imóvel dos seus sonhos com atendimento personalizado e exclusivo.',
+  title: 'Kellen Gagno | Corretora de Imóveis de médio e alto Padrão',
+  description: 'Procurando imóveis de medio e alto padrão em Vitória? Conheça lançamentos exclusivos na Grande Vitória e região com atendimento personalizado de Kellen Gagno',
   generator: 'v0.app',
   icons: {
     icon: [
