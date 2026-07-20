@@ -21,7 +21,7 @@ const properties = [
     location: "Jardim Camburi, Vitória-ES",
     bedrooms: "2, 3 Quartos e 3 Suites",
     area: "64 a 227m2",
-    image: "/images/parque-flora.png",
+    image: "/images/lancamento-parque-flora-jardim-camburi-vitoria-es.png",
     tag: "Lançamento",
     link: "/imoveis/vitoria/parque-flora-jardim-camburi"
   },
@@ -31,7 +31,7 @@ const properties = [
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "Studio, 2 e 3 Quartos",
     area: "38 a 94m2",
-    image: "/images/youniverse.jpg",
+    image: "/images/lancamento-youniverse-enseada-do-sua-vitoria-es.jpg",
     tag: "Lançamento"
   },
   {
@@ -49,7 +49,7 @@ const properties = [
     location: "Jardim Camburi, Vitória-ES",
     bedrooms: "1, 2 Quartos",
     area: "30 a 67m2",
-    image: "/images/cidade-camburi.jpeg",
+    image: "/images/lancamento-cidade-camburi-jardim-camburi-vitoria-es.jpeg",
     tag: "Lançamento"
   },
   {
@@ -58,7 +58,7 @@ const properties = [
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "4 Quartos c/ 4 Suítes",
     area: "177 à 311m2",
-    image: "/images/reserva-vitoria.jpg",
+    image: "/images/apartamento-reserva-vitoria-praia-do-sua-es.jpg",
     tag: "Lançamento"
   },
 ]

@@ -21,7 +21,7 @@ export function Hero() {
               Kellen Gagno
             </h1>
             <h2 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl text-[#c49b63] mb-6">
-              Corretora de Imóveis de médio e alto Padrão na Grande Vitória
+              Corretora de Imóveis de médio e alto Padrão em Vitória e Grande Vitória ES
             </h2>
             <p className="font-[family-name:var(--font-body)] text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
               Experiência e dedicação para encontrar o imóvel ideal para você e sua família.

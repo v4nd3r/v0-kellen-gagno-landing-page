@@ -60,7 +60,7 @@ export function Header() {
           target="_blank"
           className="hidden md:block bg-[#c49b63] text-white px-6 py-2.5 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors"
         >
-          Fale Comigo
+          Agendar atendimento
         </Link>
 
         {/* Mobile Menu Button */}
@@ -92,7 +92,7 @@ export function Header() {
               target="_blank"
               className="bg-[#c49b63] text-white px-6 py-2.5 rounded font-[family-name:var(--font-body)] text-sm font-semibold hover:bg-[#b38a52] transition-colors text-center mt-2"
             >
-              Fale Comigo
+              Agendar atendimento
             </Link>
           </div>
         </nav>

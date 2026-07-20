@@ -36,11 +36,11 @@ ${formData.message}`
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-[family-name:var(--font-heading)] text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4">
-            Entre em Contato
+            Não encontrou o imóvel ideal?
           </h2>
           <div className="w-20 h-1 bg-[#c49b63] mx-auto mb-8" />
           <p className="font-[family-name:var(--font-body)] text-gray-600 text-lg">
-            Preencha o formulário abaixo e vamos encontrar o imóvel ideal para você.     
+            Preencha o formulário abaixo e entrarei em contato com você para entender melhor suas necessidades e ajudá-lo a encontrar o imóvel perfeito.    
           </p>
         </div>
 
