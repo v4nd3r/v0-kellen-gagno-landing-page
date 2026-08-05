@@ -108,7 +108,7 @@ export function Footer() {
         href="https://wa.me/5527992743485?text=Olá! Vi o seu site e gostaria de mais informacões sobre imóveis."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20BD5A] hover:scale-110 transition-all z-50"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20BD5A] hover:scale-110 transition-all z-50 lg:hidden"
         aria-label="Contato via WhatsApp"
       >
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

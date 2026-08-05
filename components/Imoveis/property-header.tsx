@@ -37,7 +37,7 @@ export function PropertyHeader({ propertyName, whatsappMessage }: PropertyHeader
           rel="noopener noreferrer"
           className="hidden rounded bg-[#c49b63] px-4 py-2 font-[family-name:var(--font-body)] text-sm font-semibold text-white transition-colors hover:bg-[#b38a52] md:block"
         >
-          Fale Comigo
+          Agendar atendimento
         </Link>
       </div>
     </header>

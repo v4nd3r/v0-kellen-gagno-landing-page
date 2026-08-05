@@ -6,6 +6,9 @@ import { useState } from "react"
 import { PropertyFooter } from "@/components/Imoveis/property-footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
 import { PropertyHero } from "@/components/Imoveis/property-hero"
+import { PropertyAbout } from "@/components/Imoveis/property-about"
+import { PropertyDifferentials } from "@/components/Imoveis/property-differentials"
+import { PropertyFacilities } from "@/components/Imoveis/property-facilities"
 import { 
   Wifi, 
   Wind, 
@@ -118,114 +121,28 @@ export default function MacanResidencePage() {
       />
 
       {/* About Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-6">
-                Qualidade ARGO, sinônimo de sofisticação e segurança
-              </h2>
-              <p className="font-[family-name:var(--font-body)] text-gray-600 leading-relaxed mb-6">
-                O Macan Residence oferece apartamentos de 2 quartos com suíte e opções Garden, em um empreendimento que une lazer completo, acabamento de alto padrão e localização privilegiada em Jardim Camburi.
-              </p>
-              <p className="font-[family-name:var(--font-body)] text-gray-600 leading-relaxed mb-8">
-                Com mais de 23 anos de história e 3.300 unidades já entregues, a ARGO é referência em qualidade construtiva no Espírito Santo.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="https://wa.me/5527992743485?text=Olá! Quero saber mais sobre o Macan Residence."
-                  target="_blank"
-                  className="bg-[#c49b63] text-white px-8 py-3 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#b38a52] transition-colors text-center"
-                >
-                  Quero Minha Unidade
-                </Link>
-                <Link
-                  href="#diferenciais"
-                  className="border-2 border-[#c49b63] text-[#c49b63] px-8 py-3 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#c49b63] hover:text-white transition-colors text-center"
-                >
-                  Ver Diferenciais
-                </Link>
-              </div>
-            </div>
-            <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-              <Image
-                src="/images/macan/imagens-macan4.png"
-                alt="Interior do Macan Residence"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <PropertyAbout
+        urlImage="/images/macan/imagens-macan4.png"
+        altUrlImage="Interior do Macan Residence"
+        titulo="Qualidade ARGO, sinônimo de sofisticação e segurança"
+        descricao="O Macan Residence oferece apartamentos de 2 quartos com suíte e opções Garden, em um empreendimento que une lazer completo, acabamento de alto padrão e localização privilegiada em Jardim Camburi."
+        descricao2="Com mais de 23 anos de história e 3.300 unidades já entregues, a ARGO é referência em qualidade construtiva no Espírito Santo."
+      />
 
       {/* Diferenciais Section */}
-      <section id="diferenciais" className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-              Diferenciais do Empreendimento
-            </h2>
-            <div className="w-20 h-1 bg-[#c49b63] mx-auto" />
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {diferenciais.map((item, index) => (
-              <div 
-                key={index}
-                className="group flex items-start gap-4 bg-white p-5 rounded-lg border border-gray-100 hover:border-[#c49b63] hover:shadow-lg hover:shadow-[#c49b63]/10 transition-all duration-300"
-              >
-                <div className="w-10 h-10 bg-[#c49b63] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white group-hover:border-2 group-hover:border-[#c49b63] transition-all duration-300">
-                  <item.icon className="w-5 h-5 text-white group-hover:text-[#c49b63] transition-all duration-300" />
-                </div>
-                <p className="font-[family-name:var(--font-body)] text-gray-700 text-sm leading-relaxed">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PropertyDifferentials
+        diferenciais={diferenciais}
+      />
 
       {/* Lazer Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-              <Image
-                src="/images/macan/argo-macan-bg-scaled.jpg"
-                alt="Área de lazer do Macan Residence"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-                Lazer com mais de 900 m²
-              </h2>
-              <div className="w-20 h-1 bg-[#c49b63] mb-8" />
-              <div className="grid grid-cols-2 gap-4">
-                {lazer.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-[#c49b63]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-4 h-4 text-[#c49b63]" />
-                    </div>
-                    <span className="font-[family-name:var(--font-body)] text-gray-700 text-sm">
-                      {item.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <Link
-                href="https://wa.me/5527992743485?text=Olá! Quero conhecer o lazer do Macan Residence."
-                target="_blank"
-                className="inline-block mt-8 bg-[#c49b63] text-white px-8 py-3 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#b38a52] transition-colors"
-              >
-                Agendar Visita
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PropertyFacilities
+        itensLazer={lazer}
+        titulo="Lazer com mais de 900 m²"
+        descricao="Desfrute de todas as comodidades que o Macan Residence oferece para sua tranquilidade e bem-estar."
+        urlImage="/images/macan/argo-macan-bg-scaled.jpg"
+        altUrlImage="Área de lazer do Macan Residence"
+        whatsappMessage="Olá! Quero conhecer mais sobre o Macan Residence."
+      />
 
       {/* Location Section */}
       <section className="py-16 lg:py-24 bg-gray-50">

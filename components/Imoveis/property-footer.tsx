@@ -38,7 +38,7 @@ export function PropertyFooter({ whatsappMessage, legalNotice = DEFAULT_LEGAL_NO
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed right-6 bottom-6 z-50 rounded-full bg-green-500 p-4 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl"
+        className="fixed right-6 bottom-6 z-50 rounded-full bg-green-500 p-4 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-green-600 hover:shadow-xl lg:hidden"
         aria-label="Conversar pelo WhatsApp"
       >
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
