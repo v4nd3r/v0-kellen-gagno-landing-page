@@ -1,17 +1,19 @@
 import Image from "next/image"
-import Link from "next/link"
 import { Instagram, Facebook, Linkedin, MessageCircle } from "lucide-react"
 
-export function Footer() {
+const WHATSAPP_NUMBER = "5527992743485"
+const EMAIL = "kellen.es@associadolopes-es.com.br"
+
+export function Footer({ whatsappMessage }: { whatsappMessage: string }) {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-[#1a1a1a] text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Logo and Description */}
-          <div className="lg:col-span-2">
+          <div className="">
             <Image
               src="/images/logo-dark-sem-fundo-horizontal.png"
               alt="Logo Kellen Gagno Corretora"
@@ -22,7 +24,26 @@ export function Footer() {
             <p className="font-[family-name:var(--font-body)] text-white/70 text-sm leading-relaxed max-w-md mb-6">
               Especialista em imóveis de médio e alto padrão. Atendimento personalizado e exclusivo para encontrar o imóvel ideal para você.
             </p>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-4 text-[#c49b63]">
+              Contato
+            </h4>
+            <div className="space-y-3 font-[family-name:var(--font-body)] text-sm text-white/70">
+              <p><a href={`tel:+${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c49b63]"> (27) 99274-3485</a></p>
+              <p><a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c49b63]">{EMAIL}</a></p>
+              <p>Grande Vitória, ES</p>
+            </div>
             
+          </div>
+
+          <div>
+            {/* Redes sociais */}
+            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-4 text-[#c49b63]">
+              Redes Sociais
+            </h4>
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a 
@@ -43,50 +64,7 @@ export function Footer() {
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              {/* <a 
-                href="https://linkedin.com/in/kellengagno" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#c49b63] transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a> */}
             </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-4 text-[#c49b63]">
-              Links Rápidos
-            </h4>
-            <nav className="space-y-3">
-              <Link href="#inicio" className="block font-[family-name:var(--font-body)] text-sm text-white/70 hover:text-[#c49b63] transition-colors">
-                Início
-              </Link>
-              <Link href="#sobre" className="block font-[family-name:var(--font-body)] text-sm text-white/70 hover:text-[#c49b63] transition-colors">
-                Sobre Mim
-              </Link>
-              <Link href="#imoveis" className="block font-[family-name:var(--font-body)] text-sm text-white/70 hover:text-[#c49b63] transition-colors">
-                Imóveis
-              </Link>
-              <Link href="#contato" className="block font-[family-name:var(--font-body)] text-sm text-white/70 hover:text-[#c49b63] transition-colors">
-                Contato
-              </Link>
-            </nav>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-[family-name:var(--font-heading)] text-lg font-semibold mb-4 text-[#c49b63]">
-              Contato
-            </h4>
-            <div className="space-y-3 font-[family-name:var(--font-body)] text-sm text-white/70">
-              <p>(27) 99274-3485</p>
-              <p>kellen.es@associadolopes-es.com.br</p>
-              <p>Grande Vitória, ES</p>
-            </div>
-            
           </div>
         </div>
       </div>
@@ -105,7 +83,7 @@ export function Footer() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/5527992743485?text=Olá! Vi o seu site e gostaria de mais informacões sobre imóveis."
+        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20BD5A] hover:scale-110 transition-all z-50 lg:hidden"

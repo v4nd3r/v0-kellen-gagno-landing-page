@@ -36,9 +36,9 @@ export function PropertyHero({ urlImage, altUrlImage, tipoEmpreendimento, nomeEm
                         {descricaoEmpreendimento}
                     </p>
                     <div className="flex flex-wrap gap-4 mt-6">
-                        {detalhesEmpreendimento?.map((item) => 
-                            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
-                                <span key={item} className="text-white font-[family-name:var(--font-body)] text-sm">{item}</span>
+                        {detalhesEmpreendimento?.map((item, index) => 
+                            <div key={index} className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded">
+                                <span className="text-white font-[family-name:var(--font-body)] text-sm">{item}</span>
                             </div>
                         )}
                     </div>

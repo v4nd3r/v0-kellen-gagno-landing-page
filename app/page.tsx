@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       <Properties />
       <Contact />
-      <Footer />
+      <Footer whatsappMessage="Olá! Vi o seu site e gostaria de mais informações sobre imóveis." />
     </main>
   )
 }

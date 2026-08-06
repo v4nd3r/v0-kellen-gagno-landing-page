@@ -1,14 +1,15 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
-import { PropertyFooter } from "@/components/Imoveis/property-footer"
+import { Footer } from "@/components/footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
 import { PropertyHero } from "@/components/Imoveis/property-hero"
 import { PropertyAbout } from "@/components/Imoveis/property-about"
 import { PropertyDifferentials } from "@/components/Imoveis/property-differentials"
 import { PropertyFacilities } from "@/components/Imoveis/property-facilities"
+import { PropertyLocation } from "@/components/Imoveis/property-location"
+import { PropertyGallery } from "@/components/Imoveis/property-gallery"
+import { PropertyForm } from "@/components/Imoveis/property-form"
 import { 
   Wifi, 
   Wind, 
@@ -24,20 +25,14 @@ import {
   Thermometer,
   Droplets,
   Gauge,
-  MapPin,
-  Phone,
-  Mail,
-  Check,
   Waves,
   Dumbbell,
   Users,
   Baby,
   Briefcase,
-  ShoppingCart,
   Bike,
   Flame
 } from "lucide-react"
-
 
 const diferenciais = [
   { icon: Wifi, text: "Infraestrutura para automação residencial com quadro de conectividade exclusivo" },
@@ -68,49 +63,33 @@ const lazer = [
 ]
 
 const galeria = [
-  { src: "/images/macan/fachada.jpg", alt: "Fachada do Macan Residence" },
-  { src: "/images/macan/Argo_Macan_Academia.jpg", alt: "Academia" },
-  { src: "/images/macan/Argo_Macan_Bicicletario.jpg", alt: "Bicicletário" },
-  { src: "/images/macan/Argo_Macan_Brinquedoteca.jpg", alt: "Brinquedoteca" },
-  { src: "/images/macan/Argo_Macan_Confraria.jpg", alt: "Confraria" },
-  { src: "/images/macan/Argo_Macan_Coworking.jpg", alt: "Coworking" },
-  { src: "/images/macan/Argo_Macan_Mini_Mercado.jpg", alt: "Mini Mercado" },
-  { src: "/images/macan/imagens-macan.png", alt: "Banheiro social" },
-  { src: "/images/macan/imagens-macan3.png", alt: "Suíte" },
-  { src: "/images/macan/imagens-macan4.png", alt: "Sala de jantar" },
-  { src: "/images/macan/imagens-macan5.png", alt: "Garden" },
-  { src: "/images/macan/imagens-macan6.png", alt: "Cozinha" },
-  { src: "/images/macan/imagens-macan7.png", alt: "varanda" },
+  { src: "/images/macan/fachada.jpg", alt: "Fachada do Macan Residence", label: "Fachada" },
+  { src: "/images/macan/Argo_Macan_Academia.jpg", alt: "Academia do Macan Residence", label: "Academia" },
+  { src: "/images/macan/Argo_Macan_Bicicletario.jpg", alt: "Bicicletário do Macan Residence", label: "Bicicletário" },
+  { src: "/images/macan/Argo_Macan_Brinquedoteca.jpg", alt: "Brinquedoteca do Macan Residence", label: "Brinquedoteca" },
+  { src: "/images/macan/Argo_Macan_Confraria.jpg", alt: "Confraria do Macan Residence", label: "Confraria" },
+  { src: "/images/macan/Argo_Macan_Coworking.jpg", alt: "Coworking do Macan Residence", label: "Coworking" },
+  { src: "/images/macan/Argo_Macan_Mini_Mercado.jpg", alt: "Mini Mercado do Macan Residence", label: "Mini Mercado" },
+  { src: "/images/macan/imagens-macan.png", alt: "Banheiro social do Macan Residence", label: "Banheiro social" },
+  { src: "/images/macan/imagens-macan3.png", alt: "Suíte do Macan Residence", label: "Suíte" },
+  { src: "/images/macan/imagens-macan4.png", alt: "Sala de jantar do Macan Residence", label: "Sala de jantar" },
+  { src: "/images/macan/imagens-macan5.png", alt: "Garden do Macan Residence", label: "Garden" },
+  { src: "/images/macan/imagens-macan6.png", alt: "Cozinha do Macan Residence", label: "Cozinha" },
+  { src: "/images/macan/imagens-macan7.png", alt: "varanda do Macan Residence", label: "varanda" },
 ]
 
 export default function MacanResidencePage() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    telefone: "",
-    interesse: "2 Quartos com Suíte"
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    const message = `Olá! Me chamo ${formData.nome} e tenho interesse no Macan Residence (${formData.interesse}). Meu telefone é ${formData.telefone}. Gostaria de mais informações.`
-    const whatsappUrl = `https://wa.me/5527992743485?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, "_blank")
-  }
-
-  const itemsPerPage = 3
-  const totalGallerySlides = Math.ceil(galeria.length / itemsPerPage)
-  const gallerySlides = Array.from({ length: totalGallerySlides }, (_, index) =>
-    galeria.slice(index * itemsPerPage, index * itemsPerPage + itemsPerPage)
-  )
 
   return (
     <main className="min-h-screen bg-white">
+
+      {/* Cabeçalho */}
       <PropertyHeader
         propertyName="Macan Residence"
         whatsappMessage="Olá! Tenho interesse no Macan Residence."
       />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <PropertyHero
         urlImage="/images/macan/fachada.jpg"
         altUrlImage="Macan Residence"
@@ -120,7 +99,7 @@ export default function MacanResidencePage() {
         detalhesEmpreendimento={["2 Quartos c/ Suíte", "À partir de 59,83 m²", "Jardim Camburi"]}
       />
 
-      {/* About Section */}
+      {/* Sobre */}
       <PropertyAbout
         urlImage="/images/macan/imagens-macan4.png"
         altUrlImage="Interior do Macan Residence"
@@ -129,12 +108,12 @@ export default function MacanResidencePage() {
         descricao2="Com mais de 23 anos de história e 3.300 unidades já entregues, a ARGO é referência em qualidade construtiva no Espírito Santo."
       />
 
-      {/* Diferenciais Section */}
+      {/* Diferenciais */}
       <PropertyDifferentials
         diferenciais={diferenciais}
       />
 
-      {/* Lazer Section */}
+      {/* Lazer */}
       <PropertyFacilities
         itensLazer={lazer}
         titulo="Lazer com mais de 900 m²"
@@ -144,263 +123,31 @@ export default function MacanResidencePage() {
         whatsappMessage="Olá! Quero conhecer mais sobre o Macan Residence."
       />
 
-      {/* Location Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-              Localização Privilegiada
-            </h2>
-            <p className="font-[family-name:var(--font-body)] text-gray-600 max-w-2xl mx-auto">
-              Jardim Camburi: praticidade e qualidade de vida em um só lugar. Um bairro consolidado e desejado, com acesso rápido a shoppings, restaurantes, escolas e à Praia de Camburi.
-            </p>
-            <div className="w-20 h-1 bg-[#c49b63] mx-auto mt-4" />
-          </div>
-          <div className="bg-white rounded-lg p-8 shadow-sm">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 bg-[#c49b63] rounded-full flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="font-[family-name:var(--font-body)] font-semibold text-black text-lg">
-                  Endereço
-                </h3>
-                <p className="font-[family-name:var(--font-body)] text-gray-600">
-                  Rua Esméria Barros Deorce, 450 - Jardim Camburi, Vitória/ES
-                </p>
-              </div>
-            </div>
-              
-            <div className="rounded-lg mb-6 overflow-hidden flex justify-center">
-              <img
-                src="/images/macan/mapa Macan.png"
-                alt="Localização do Macan Residence" />
-            </div>
+      {/* Localização */}
+      <PropertyLocation
+        titulo="Localização Privilegiada"
+        descricao="Jardim Camburi: praticidade e qualidade de vida em um só lugar. Um bairro consolidado e desejado, com acesso rápido a shoppings, restaurantes, escolas e à Praia de Camburi."
+        endereco="Rua Esméria Barros Deorce, 450"
+        endereco2="Jardim Camburi, Vitória/ES"
+        urlMapa="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d233.95091302349937!2d-40.26676975298546!3d-20.249932440199082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1780452235970!5m2!1spt-BR!2sbr"
+      />
 
-            <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d233.95091302349937!2d-40.26676975298546!3d-20.249932440199082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1780452235970!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização Macan Residence"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Galeria de fotos */}
+      <PropertyGallery
+        titulo="Conheça o Macan Residence"
+        images={galeria}
+      />
 
-      {/* Pricing Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-              Invista com Segurança
-            </h2>
-            <p className="font-[family-name:var(--font-body)] text-gray-600 max-w-2xl mx-auto">
-              Conquiste o melhor custo-benefício da região com condições especiais.
-            </p>
-            <div className="w-20 h-1 bg-[#c49b63] mx-auto mt-4" />
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* InvesteARGO */}
-            <div className="bg-gray-50 rounded-lg p-8 border-2 border-[#c49b63]">
-              <div className="bg-[#c49b63] text-white text-center py-2 rounded -mt-12 mx-4 mb-6">
-                <span className="font-[family-name:var(--font-body)] font-semibold text-sm">RECOMENDADO</span>
-              </div>
-              <h3 className="font-[family-name:var(--font-heading)] text-2xl text-black font-semibold mb-2">
-                Tabela InvesteARGO
-              </h3>
-              <p className="font-[family-name:var(--font-body)] text-gray-600 text-sm mb-4">
-                Unidade 504 - 59,83m²
-              </p>
-              <div className="text-center py-4 border-b border-gray-200 mb-4">
-                <span className="font-[family-name:var(--font-body)] text-sm text-gray-500">A partir de</span>
-                <p className="font-[family-name:var(--font-heading)] text-4xl text-[#c49b63] font-bold">
-                  R$ 737.000
-                </p>
-              </div>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-[#c49b63]" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">Até 10% de desconto</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-[#c49b63]" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">100% pagamento durante a obra</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-[#c49b63]" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">Melhor preço por m² da região</span>
-                </li>
-              </ul>
-              <Link
-                href="https://wa.me/5527992743485?text=Olá! Tenho interesse na Tabela InvesteARGO do Macan Residence."
-                target="_blank"
-                className="block w-full bg-[#c49b63] text-white py-3 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#b38a52] transition-colors text-center"
-              >
-                Quero Esta Condição
-              </Link>
-            </div>
+      {/* Formulário de contato */}
+      <PropertyForm
+        titulo="Fale com a Kellen Gagno"
+        descricao="Preencha o formulário e receba informações exclusivas sobre o Macan Residence."
+        opcoes={["2 Quartos com Suíte", "Garden", "Investimento", "Outro", "3 quatos de teste"]}
+        nomeEmpreedimento="Macan Residence"
+      />
 
-            {/* Tabela ARGO */}
-            <div className="bg-white rounded-lg p-8 border border-gray-200">
-              <h3 className="font-[family-name:var(--font-heading)] text-2xl text-black font-semibold mb-2 mt-4">
-                Tabela ARGO
-              </h3>
-              <p className="font-[family-name:var(--font-body)] text-gray-600 text-sm mb-4">
-                Unidade 504 - 59,83m²
-              </p>
-              <div className="text-center py-4 border-b border-gray-200 mb-4">
-                <span className="font-[family-name:var(--font-body)] text-sm text-gray-500">A partir de</span>
-                <p className="font-[family-name:var(--font-heading)] text-4xl text-black font-bold">
-                  R$ 819.040
-                </p>
-              </div>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-gray-400" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">Entrada facilitada</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-gray-400" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">Parcelas mensais de R$ 2.500</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-gray-400" />
-                  <span className="font-[family-name:var(--font-body)] text-sm text-gray-700">Financiamento de R$ 547.940</span>
-                </li>
-              </ul>
-              <Link
-                href="https://wa.me/5527992743485?text=Olá! Tenho interesse na Tabela ARGO do Macan Residence."
-                target="_blank"
-                className="block w-full border-2 border-[#c49b63] text-[#c49b63] py-3 rounded font-[family-name:var(--font-body)] font-semibold hover:bg-[#c49b63] hover:text-white transition-colors text-center"
-              >
-                Saber Mais
-              </Link>
-            </div>
-          </div>
-          <p className="text-center font-[family-name:var(--font-body)] text-xs text-gray-500 mt-8 max-w-2xl mx-auto">
-            Os valores das parcelas são reajustados mensalmente pelo CUB. Preços válidos enquanto durar o estoque. Tabela sujeita a modificação sem aviso prévio.
-          </p>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-              Galeria
-            </h2>
-            <div className="w-20 h-1 bg-[#c49b63] mx-auto" />
-          </div>
-          <div className="overflow-auto">
-            <div
-              className="flex gap-4 transition-transform duration-500"
-            >
-              {gallerySlides.map((slide, slideIndex) => (
-                <div key={slideIndex} className="flex-shrink-0 w-full grid gap-4 grid-cols-1 md:grid-cols-3">
-                  {slide.map((image) => (
-                    <div key={image.src} className="relative aspect-square rounded-lg overflow-hidden group">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
-                Fale com a Kellen Gagno
-              </h2>
-              <p className="font-[family-name:var(--font-body)] text-gray-600">
-                Preencha o formulário e receba informações exclusivas sobre o Macan Residence.
-              </p>
-              <div className="w-20 h-1 bg-[#c49b63] mx-auto mt-4" />
-            </div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg border border-gray-100">
-              <div className="space-y-6">
-                <div>
-                  <label className="block font-[family-name:var(--font-body)] text-sm font-medium text-black mb-2">
-                    Nome Completo
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.nome}
-                    onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 font-[family-name:var(--font-body)] text-black focus:outline-none focus:ring-2 focus:ring-[#c49b63] focus:border-transparent"
-                    placeholder="Seu nome"
-                  />
-                </div>
-                <div>
-                  <label className="block font-[family-name:var(--font-body)] text-sm font-medium text-black mb-2">
-                    Telefone / WhatsApp
-                  </label>
-                  <input
-                    type="tel"
-                    required
-                    value={formData.telefone}
-                    onChange={(e) => setFormData({...formData, telefone: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 font-[family-name:var(--font-body)] text-black focus:outline-none focus:ring-2 focus:ring-[#c49b63] focus:border-transparent"
-                    placeholder="(27) 99999-9999"
-                  />
-                </div>
-                <div>
-                  <label className="block font-[family-name:var(--font-body)] text-sm font-medium text-black mb-2">
-                    Interesse
-                  </label>
-                  <select
-                    value={formData.interesse}
-                    onChange={(e) => setFormData({...formData, interesse: e.target.value})}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 font-[family-name:var(--font-body)] text-black focus:outline-none focus:ring-2 focus:ring-[#c49b63] focus:border-transparent bg-white"
-                  >
-                    <option value="2 Quartos com Suíte">2 Quartos com Suíte</option>
-                    <option value="Garden">Opção Garden</option>
-                    <option value="Investimento">Investimento</option>
-                    <option value="Outro">Outro</option>
-                  </select>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#c49b63] text-white py-4 rounded-lg font-[family-name:var(--font-body)] font-semibold hover:bg-[#b38a52] transition-colors"
-                >
-                  Enviar pelo WhatsApp
-                </button>
-              </div>
-            </form>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
-              <a href="tel:+5527992743485" className="flex items-center gap-2 text-gray-600 hover:text-[#c49b63] transition-colors">
-                <Phone className="w-5 h-5" />
-                <span className="font-[family-name:var(--font-body)] text-sm">(27) 99274-3485</span>
-              </a>
-              <a href="mailto:kellen.es@associadolopes-es.com.br" className="flex items-center gap-2 text-gray-600 hover:text-[#c49b63] transition-colors">
-                <Mail className="w-5 h-5" />
-                <span className="font-[family-name:var(--font-body)] text-sm">kellen.es@associadolopes-es.com.br</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <PropertyFooter whatsappMessage="Olá! Tenho interesse no Macan Residence." />
+      {/* Rodapé */}
+      <Footer whatsappMessage="Olá! Tenho interesse no Macan Residence." />
     </main>
   )
 }
