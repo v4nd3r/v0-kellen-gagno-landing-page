@@ -45,6 +45,9 @@
   --navy: #1a2744;
   --navy-light: #2a3a5a;
   --cream: #f8f6f3;
+
+  --button-primary: #c9a962;
+  --button-primary-dark: #b89a4f;
 }
 
 .dark {

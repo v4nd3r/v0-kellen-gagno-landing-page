@@ -27,7 +27,7 @@ const moveGallery = (direction: number) => setActiveImage((current) => (current 
             <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-4">
               {titulo}
             </h2>
-            <div className="w-20 h-1 bg-[#c49b63] mx-auto" />
+            <div className="w-20 h-1 bg-[#c49b63]" />
           </div>
           <div className="flex gap-2">
             <button onClick={() => moveGallery(-1)} className="flex h-12 w-12 items-center justify-center rounded-full border border-[#14231c]/20 transition-colors hover:bg-[#14231c] hover:text-white" aria-label="Imagem anterior"><ChevronLeft /></button>

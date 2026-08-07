@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -42,7 +40,7 @@ export function PropertyFacilities({ itensLazer, titulo, descricao, urlImage, al
             <p className="font-[family-name:var(--font-body)] text-gray-700 text-sm mb-6">
               {descricao}
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
               {itensLazer.map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-[#c49b63]/10 rounded-full flex items-center justify-center flex-shrink-0">

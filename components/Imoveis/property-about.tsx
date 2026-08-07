@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 
 type AboutProps = {
@@ -20,6 +18,7 @@ export function PropertyAbout({ urlImage, altUrlImage, titulo, descricao, descri
                     <h2 className="font-[family-name:var(--font-heading)] text-3xl lg:text-4xl text-black font-semibold mb-6">
                         {titulo}
                     </h2>
+                    <div className="w-20 h-1 bg-[#c49b63] mb-8" />
                     <p className="font-[family-name:var(--font-body)] text-gray-600 leading-relaxed mb-6">
                         {descricao}
                     </p>

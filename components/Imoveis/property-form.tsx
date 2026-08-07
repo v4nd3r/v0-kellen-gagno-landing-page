@@ -1,6 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+"use client"
+
 import { useState } from "react"
 
 const WHATSAPP_NUMBER = "5527992743485"

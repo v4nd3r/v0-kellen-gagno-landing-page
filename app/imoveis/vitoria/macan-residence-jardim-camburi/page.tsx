@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
 import { PropertyHero } from "@/components/Imoveis/property-hero"
@@ -142,7 +141,7 @@ export default function MacanResidencePage() {
       <PropertyForm
         titulo="Fale com a Kellen Gagno"
         descricao="Preencha o formulário e receba informações exclusivas sobre o Macan Residence."
-        opcoes={["2 Quartos com Suíte", "Garden", "Investimento", "Outro", "3 quatos de teste"]}
+        opcoes={["2 Quartos com Suíte", "Garden", "Investimento", "Outras opções",]}
         nomeEmpreedimento="Macan Residence"
       />
 

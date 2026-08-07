@@ -35,7 +35,7 @@ export function PropertyHeader({ propertyName, whatsappMessage }: PropertyHeader
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden rounded bg-[#c49b63] px-4 py-2 font-[family-name:var(--font-body)] text-sm font-semibold text-white transition-colors hover:bg-[#b38a52] md:block"
+          className="hidden rounded bg-[var(--button-primary)] px-4 py-2 font-[family-name:var(--font-body)] text-sm font-semibold text-white transition-colors hover:bg-[var(--button-primary-dark)] md:block"
         >
           Agendar atendimento
         </Link>
