@@ -79,6 +79,16 @@ const galeria = [
 export const metadata: Metadata = {
   title: 'Macan Residence em Jardim Camburi, Vitória | Kellen Gagno',
   description: 'Conheça o Macan Residence em Jardim Camburi, Vitória/ES. Apartamentos de 2 quartos com suíte, opções Garden, lazer completo e alto padrão ARGO.',
+  keywords: [
+    'Macan Residence',
+    'Jardim Camburi',
+    'apartamentos 2 quartos',
+    'Garden',
+    'lazer completo',
+    'ARGO',
+    'Vitória ES',
+    'Kellen Gagno'
+  ],
 }
 
 export default function MacanResidencePage() {

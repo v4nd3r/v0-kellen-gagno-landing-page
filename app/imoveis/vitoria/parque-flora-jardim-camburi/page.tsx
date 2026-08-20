@@ -13,6 +13,21 @@ import { Footer } from "@/components/footer"
  export const metadata: Metadata = {
    title: "Parque Flora em Jardim Camburi, Vitória | Kellen Gagno",
    description: "Conheça o Parque Flora em Jardim Camburi, Vitória/ES. Apartamentos de 2 e 3 quartos e 3 suítes, com plantas de 64,78 a 227,01 m². Alto padrão Sá Cavalcanti",
+   keywords: [
+     "Parque Flora",
+     "Parque Flora Jardim Camburi",
+     "apartamentos em Vitória",
+     "apartamentos em Jardim Camburi",
+     "condominio em Vitória",
+     "imóveis de alto padrão",
+     "lancamento Parque Flora",
+     "Kellen Gagno",
+     "Sá Cavalcanti",
+     "2 quartos Vitória",
+     "3 quartos Vitória",
+     "apartamentos com 3 suítes",
+     "empreendimento Jardim Camburi",
+   ],
  }
 
 const diferenciais = [
