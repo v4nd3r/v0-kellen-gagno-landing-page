@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from 'next'
 import { Footer } from "@/components/footer"
 import { PropertyHeader } from "@/components/Imoveis/property-header"
 import { PropertyHero } from "@/components/Imoveis/property-hero"
@@ -76,6 +75,11 @@ const galeria = [
   { src: "/images/macan/imagens-macan6.png", alt: "Cozinha do Macan Residence", label: "Cozinha" },
   { src: "/images/macan/imagens-macan7.png", alt: "varanda do Macan Residence", label: "varanda" },
 ]
+
+export const metadata: Metadata = {
+  title: 'Macan Residence em Jardim Camburi, Vitória | Kellen Gagno',
+  description: 'Conheça o Macan Residence em Jardim Camburi, Vitória/ES. Apartamentos de 2 quartos com suíte, opções Garden, lazer completo e alto padrão ARGO.',
+}
 
 export default function MacanResidencePage() {
 
