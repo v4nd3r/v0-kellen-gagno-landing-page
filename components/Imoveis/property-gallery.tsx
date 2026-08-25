@@ -41,7 +41,7 @@ const moveGallery = (direction: number) => setActiveImage((current) => (current 
         <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
           {images.map((image, index) =>
             <button key={image.src} onClick={() => setActiveImage(index)} className={`relative h-20 min-w-28 overflow-hidden rounded border-2 ${activeImage === index ? "border-[#b18a57]" : "border-transparent"}`} aria-label={`Ver ${image.label}`} aria-current={activeImage === index}>
-              <Image src={image.src} alt="" fill sizes="112px" className="object-cover" />
+              <Image src={image.src} alt={image.alt} fill sizes="112px" className="object-cover" />
             </button>
           )}
         </div>

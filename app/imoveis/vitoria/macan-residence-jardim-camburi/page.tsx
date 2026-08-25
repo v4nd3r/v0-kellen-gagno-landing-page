@@ -76,8 +76,34 @@ const galeria = [
   { src: "/images/macan/imagens-macan7.png", alt: "varanda do Macan Residence", label: "varanda" },
 ]
 
+const dadosEstruturados = {
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  name: "Macan Residence Jardim Camburi | Apartamentos ARGO 2 Quartos - Kellen Gagno",
+  description: "Empreendimento ARGO em Jardim Camburi com apartamentos de 2 quartos com suíte e opções Garden.",
+  url: "https://kellengagnocorretora.com.br/imoveis/vitoria/macan-residence-jardim-camburi",
+  image: "https://kellengagnocorretora.com.br/images/macan/fachada.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rua Esméria Barros Deorce, 450",
+    addressLocality: "Vitória",
+    addressRegion: "ES",
+    addressCountry: "BR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -20.249932,
+    longitude: -40.266769,
+  },
+  broker: {
+    "@type": "RealEstateAgent",
+    "name": "Kellen Gagno Corretora",
+    "url": "https://kellengagnocorretora.com.br/"
+  }
+}
+
 export const metadata: Metadata = {
-  title: 'Macan Residence em Jardim Camburi, Vitória | Kellen Gagno',
+  title: 'Macan Residence Jardim Camburi | Apartamentos ARGO 2 Quartos - Kellen Gagno',
   description: 'Conheça o Macan Residence em Jardim Camburi, Vitória/ES. Apartamentos de 2 quartos com suíte, opções Garden, lazer completo e alto padrão ARGO.',
   keywords: [
     'Macan Residence',
@@ -95,6 +121,10 @@ export default function MacanResidencePage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dadosEstruturados) }}
+      />
 
       {/* Cabeçalho */}
       <PropertyHeader
@@ -107,7 +137,7 @@ export default function MacanResidencePage() {
         urlImage="/images/macan/fachada.jpg"
         altUrlImage="Macan Residence"
         tipoEmpreendimento="Lançamento"
-        nomeEmpreendimento="Macan Residence"
+        nomeEmpreendimento="Macan Residence – Apartamentos 2 Quartos em Jardim Camburi, Vitória"
         descricaoEmpreendimento="Seu refúgio de conforto e tranquilidade em Jardim Camburi. Apartamentos de 2 quartos com suíte e opções Garden."
         detalhesEmpreendimento={["2 Quartos c/ Suíte", "À partir de 59,83 m²", "Jardim Camburi"]}
       />

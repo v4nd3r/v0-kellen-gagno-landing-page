@@ -62,9 +62,39 @@ const galeria = [
   { src: "/images/parque-flora/playroom.jpg", alt: "Brinquedoteca do Parque Flora", label: "Brinquedoteca" },
 ]
 
+const dadosEstruturados = {
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  name: "Residencial Parque Flora, Jardim Camburi, Vitória | Apartamentos 2 Quartos - Kellen Gagno",
+  description: "Empreendimento ARGO em Jardim Camburi com apartamentos de 2 quartos com suíte e opções Garden.",
+  url: "https://kellengagnocorretora.com.br/imoveis/vitoria/parque-flora-jardim-camburi",
+  image: "https://kellengagnocorretora.com.br/images/parque-flora/hero.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Rua Oswaldo Bastos de Souza Freitas, 395",
+    addressLocality: "Vitória",
+    addressRegion: "ES",
+    addressCountry: "BR",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -20.2610082,
+    longitude: -40.260161,
+  },
+  broker: {
+    "@type": "RealEstateAgent",
+    "name": "Kellen Gagno Corretora",
+    "url": "https://kellengagnocorretora.com.br/"
+  }
+}
+
 export default function ParqueFloraPage() {
   return (
       <main className="min-h-screen bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(dadosEstruturados) }}
+        />
   
         {/* Cabeçalho */}
         <PropertyHeader
@@ -77,7 +107,7 @@ export default function ParqueFloraPage() {
           urlImage="/images/parque-flora/hero.jpg"
           altUrlImage="Parque Flora"
           tipoEmpreendimento="Lançamento"
-          nomeEmpreendimento="Parque Flora"
+          nomeEmpreendimento="Residencial Parque Flora, Jardim Camburi, Vitória"
           descricaoEmpreendimento="Um novo jeito de viver, onde natureza, arquitetura e conveniência florescem juntas."
           detalhesEmpreendimento={["2 e 3 quartos", "3 suítes", "64,78 a 227,01 m²"]}
         />

@@ -35,6 +35,7 @@ export function Footer({ whatsappMessage }: { whatsappMessage: string }) {
               <p><a href={`tel:+${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c49b63]"> (27) 99274-3485</a></p>
               <p><a href={`mailto:${EMAIL}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#c49b63]">{EMAIL}</a></p>
               <p>Grande Vitória, ES</p>
+              <p>CRECI 15009F</p>
             </div>
             
           </div>
