@@ -42,6 +42,40 @@ export const metadata: Metadata = {
   },
 }
 
+const dadosEstruturadosRealState = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "Kellen Gagno Corretora",
+  image: "https://kellengagnocorretora.com.br/images/logo-horizontal.png",
+  url: "https://kellengagnocorretora.com.br/",
+  telephone: "+55-27-99274-3485",
+  email: "kellen.es@associadolopes-es.com.br",
+  areaServed: [
+    { "@type": "City", "name": "Vitória" },
+    { "@type": "City", "name": "Vila Velha" },
+    { "@type": "City", "name": "Serra" },
+    { "@type": "City", "name": "Cariacica" },
+    { "@type": "City", "name": "Guarapari" }
+  ],
+  identifier: {
+    "@type": "PropertyValue",
+    "name": "CRECI",
+    "value": "ES-15009F"
+  },
+  address: {
+    "@type": "PostalAddress",
+    "addressLocality": "Vitória",
+    "addressRegion": "ES",
+    "addressCountry": "BR"
+  },
+  sameAs: [
+    "https://instagram.com/kellengagnocorretora_",
+    "https://www.facebook.com/kellengagnocorretora/"
+  ],
+  //priceRange: "$$$",
+  description: "Especialista em imóveis de médio e alto padrão na Grande Vitória/ES, com atendimento personalizado e exclusivo."
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,41 +96,10 @@ export default function RootLayout({
             gtag('config', '${GA_ID}');
           `}
         </Script>
-        <script type="application/ld+json">
-          {`
-            "@context": "https://schema.org",
-            "@type": "RealEstateAgent",
-            "name": "Kellen Gagno Corretora",
-            "image": "https://kellengagnocorretora.com.br/images/logo-horizontal.png",
-            "url": "https://kellengagnocorretora.com.br/",
-            "telephone": "+55-27-99274-3485",
-            "email": "kellen.es@associadolopes-es.com.br",
-            "areaServed": [
-              { "@type": "City", "name": "Vitória" },
-              { "@type": "City", "name": "Vila Velha" },
-              { "@type": "City", "name": "Serra" },
-              { "@type": "City", "name": "Cariacica" },
-              { "@type": "City", "name": "Guarapari" }
-            ],
-            "identifier": {
-              "@type": "PropertyValue",
-              "name": "CRECI",
-              "value": "ES-15009F"
-            }
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Vitória",
-              "addressRegion": "ES",
-              "addressCountry": "BR"
-            },
-            "sameAs": [
-              "https://instagram.com/kellengagnocorretora_",
-              "https://www.facebook.com/kellengagnocorretora/"
-            ],
-            "priceRange": "$$$",
-            "description": "Especialista em imóveis de médio e alto padrão na Grande Vitória/ES, com atendimento personalizado e exclusivo."
-          `}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(dadosEstruturadosRealState) }}
+        />
       </head>
       <body className={`${cormorant.variable} ${montserrat.variable} antialiased`}>
         {children}
