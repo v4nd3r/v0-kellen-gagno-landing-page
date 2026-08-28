@@ -24,7 +24,7 @@ export function PropertyHeader({ propertyName, whatsappMessage }: PropertyHeader
           <span className="font-[family-name:var(--font-body)] text-sm font-medium">Voltar</span>
         </Link>
         <Image
-          src="/images/logo-horizontal.png"
+          src="/images/logo-horizontal.webp"
           alt="Kellen Gagno Corretora"
           width={100}
           height={50}

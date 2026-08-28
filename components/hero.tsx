@@ -49,12 +49,13 @@ export function Hero() {
               <div className="absolute -inset-4 border-2 border-[#c49b63]/20 rounded-lg transform -rotate-3" />
 
               <Image
-                src="/images/kellen-gagno.png"
+                src="/images/kellen-gagno-corretora.webp"
                 alt="Kellen Gagno - Corretora de Imóveis"
                 width={450}
                 height={550}
                 className="rounded-lg shadow-2xl relative z-10 object-cover"
                 priority
+                fetchPriority="high"
               />
             </div>
           </div>

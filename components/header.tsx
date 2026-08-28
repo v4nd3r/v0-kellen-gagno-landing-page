@@ -33,11 +33,12 @@ export function Header() {
       <div className="container mx-auto px-4 flex items-center justify-between relative">
         <Link href="#inicio" className="flex items-center">
           <Image
-            src="/images/logo-horizontal.png"
+            src="/images/logo-horizontal.webp"
             alt="Kellen Gagno Corretora"
             width={120}
             height={60}
             className="h-14 w-auto"
+            fetchPriority="high"
           />
         </Link>
 

@@ -15,7 +15,7 @@ export function Footer({ whatsappMessage }: { whatsappMessage: string }) {
           {/* Logo and Description */}
           <div className="">
             <Image
-              src="/images/logo-dark-sem-fundo-horizontal.png"
+              src="/images/logo-dark-sem-fundo-horizontal.webp"
               alt="Logo Kellen Gagno Corretora"
               width={150}
               height={75}
