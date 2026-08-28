@@ -80,11 +80,6 @@ const dadosEstruturados = {
     "@type": "GeoCoordinates",
     latitude: -20.2610082,
     longitude: -40.260161,
-  },
-  broker: {
-    "@type": "RealEstateAgent",
-    "name": "Kellen Gagno Corretora",
-    "url": "https://kellengagnocorretora.com.br/"
   }
 }
 
@@ -119,6 +114,10 @@ export default function ParqueFloraPage() {
           titulo="Uma vida inteira conectada ao que importa"
           descricao="O Parque Flora nasce como um lugar completo para viver bem em Jardim Camburi. Residências generosas, lazer de resort, áreas verdes e conveniência se encontram em um projeto pensado para todas as fases da vida."
           descricao2=""
+          infoArea="64 A 227m²"
+          infoQuarto="2 - 3"
+          infoSuite="1 - 3"
+          infoBanheiro="1 - 2"
         />
   
         {/* Diferenciais */}

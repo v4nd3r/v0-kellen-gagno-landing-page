@@ -94,11 +94,6 @@ const dadosEstruturados = {
     "@type": "GeoCoordinates",
     latitude: -20.249932,
     longitude: -40.266769,
-  },
-  broker: {
-    "@type": "RealEstateAgent",
-    "name": "Kellen Gagno Corretora",
-    "url": "https://kellengagnocorretora.com.br/"
   }
 }
 
@@ -149,6 +144,10 @@ export default function MacanResidencePage() {
         titulo="Qualidade ARGO, sinônimo de sofisticação e segurança"
         descricao="O Macan Residence oferece apartamentos de 2 quartos com suíte e opções Garden, em um empreendimento que une lazer completo, acabamento de alto padrão e localização privilegiada em Jardim Camburi."
         descricao2="Com mais de 23 anos de história e 3.300 unidades já entregues, a ARGO é referência em qualidade construtiva no Espírito Santo."
+        infoArea="59 a 174m²"
+        infoQuarto="2"
+        infoSuite="1"
+        infoBanheiro="2"
       />
 
       {/* Diferenciais */}
