@@ -20,6 +20,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kellengagnocorretora.com.br'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'Kellen Gagno | Corretora de Imóveis de médio e alto Padrão em Vitória e Grande Vitória ES',
   description: 'Procurando imóveis de medio e alto padrão em Vitória? Conheça lançamentos exclusivos na Grande Vitória e região com atendimento personalizado de Kellen Gagno',
   generator: 'v0.app',

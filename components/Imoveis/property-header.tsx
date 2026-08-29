@@ -26,8 +26,8 @@ export function PropertyHeader({ propertyName, whatsappMessage }: PropertyHeader
         <Image
           src="/images/logo-horizontal.webp"
           alt="Kellen Gagno Corretora"
-          width={100}
-          height={50}
+          width={202}
+          height={60}
           className="h-15 w-auto"
           priority
         />

@@ -35,9 +35,9 @@ export function Header() {
           <Image
             src="/images/logo-horizontal.webp"
             alt="Kellen Gagno Corretora"
-            width={120}
+            width={202}
             height={60}
-            className="h-14 w-auto"
+            className="h-15 w-auto"
             fetchPriority="high"
           />
         </Link>
