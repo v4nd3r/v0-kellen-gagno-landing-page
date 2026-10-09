@@ -77,7 +77,12 @@ export function Footer({ whatsappMessage }: { whatsappMessage: string }) {
             <p className="font-[family-name:var(--font-body)] text-xs text-white/50 text-center md:text-left">
               {currentYear} Kellen Gagno. Todos os direitos reservados.
             </p>
-            
+            <a
+              href="/politica-de-privacidade"
+              className="font-[family-name:var(--font-body)] text-xs text-white/50 hover:text-[#c49b63] transition-colors"
+            >
+              Política de Privacidade
+            </a>
           </div>
         </div>
       </div>
