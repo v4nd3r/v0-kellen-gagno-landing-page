@@ -10,7 +10,7 @@ type AboutProps = {
   infoArea: string
   infoQuarto: string
   infoSuite: string
-  infoBanheiro: string
+  infoBanheiro?: string
 }
 
 export function PropertyAbout({ urlImage, altUrlImage, titulo, descricao, descricao2, infoArea, infoQuarto, infoSuite, infoBanheiro }: AboutProps) {

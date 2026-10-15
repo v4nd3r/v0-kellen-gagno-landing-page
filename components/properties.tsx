@@ -27,6 +27,16 @@ const properties = [
   },
   {
     id: 3,
+    title: "Reserva Vitória",
+    location: "Enseada do Suá, Vitoria - ES",
+    bedrooms: "4 Quartos c/ 4 Suítes",
+    area: "177 à 311m2",
+    image: "/images/apartamento-reserva-vitoria-praia-do-sua-es.jpg",
+    tag: "Destaque",
+    link: "/imoveis/vitoria/reserva-vitoria-enseada-do-sua",
+  },
+  {
+    id: 6,
     title: "Youniverse",
     location: "Enseada do Suá, Vitoria - ES",
     bedrooms: "Studio, 2 e 3 Quartos",
@@ -52,15 +62,7 @@ const properties = [
     image: "/images/lancamento-cidade-camburi-jardim-camburi-vitoria-es.jpeg",
     tag: "Lançamento"
   },
-  {
-    id: 6,
-    title: "Reserva Vitória",
-    location: "Enseada do Suá, Vitoria - ES",
-    bedrooms: "4 Quartos c/ 4 Suítes",
-    area: "177 à 311m2",
-    image: "/images/apartamento-reserva-vitoria-praia-do-sua-es.jpg",
-    tag: "Lançamento"
-  },
+  
 ]
 
 function getTagColor(tag: string) {

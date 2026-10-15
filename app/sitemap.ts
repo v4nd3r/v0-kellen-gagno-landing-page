@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: 'https://kellengagnocorretora.com.br/imoveis/vitoria/reserva-vitoria-enseada-do-sua',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: 'https://kellengagnocorretora.com.br/politica-de-privacidade',
       lastModified: new Date(),
       changeFrequency: 'yearly',
