@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Properties } from "@/components/properties"
+import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Properties />
+      <FAQ />
       <Contact />
       <Footer whatsappMessage="Olá! Vi o seu site e gostaria de mais informações sobre imóveis." />
     </main>

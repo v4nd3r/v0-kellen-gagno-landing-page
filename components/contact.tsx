@@ -31,7 +31,7 @@ ${formData.message}`
   }
 
   return (
-    <section id="contato" className="py-20 lg:py-28 bg-white">
+    <section id="contato" className="py-20 lg:py-28 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -46,7 +46,7 @@ ${formData.message}`
 
         <div className="max-w-xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-gray-50 p-8 rounded-lg border border-gray-100 text-left">
+          <div className="bg-white p-8 rounded-lg border border-gray-100 text-left">
             <h3 className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-black mb-6">
               Preencha o Formulário
             </h3>
