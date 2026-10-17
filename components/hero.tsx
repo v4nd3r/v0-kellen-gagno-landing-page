@@ -49,7 +49,7 @@ export function Hero() {
               <div className="absolute -inset-4 border-2 border-[#c49b63]/20 rounded-lg transform -rotate-3" />
 
               <Image
-                src="/images/kellen-gagno-corretora.webp"
+                src="/images/Kellen-Gagno-Corretora-de-imoveis-Vitoria-ES.webp"
                 alt="Kellen Gagno - Corretora de Imóveis"
                 width={450}
                 height={550}
